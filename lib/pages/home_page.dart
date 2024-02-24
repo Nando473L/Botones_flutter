@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Contador",
           style: TextStyle(
             fontSize: 24,
@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               "Fernando Cruz León",
               style: TextStyle(
                 fontSize: 18,
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Text(
               "$cont",
-              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -77,9 +77,9 @@ class _HomePageState extends State<HomePage> {
     return Positioned(
       bottom: 0,
       child: FloatingActionButton(
-        child: const Icon(Icons.refresh),
         backgroundColor: Colors.red,
         onPressed: () => _reset(),
+        child: const Icon(Icons.refresh),
       ),
     );
   }
@@ -87,9 +87,9 @@ class _HomePageState extends State<HomePage> {
   Widget _botonPersonalizado(
       IconData icono, VoidCallback onPressed, Color color) {
     return FloatingActionButton(
-      child: Icon(icono),
       backgroundColor: color,
       onPressed: onPressed,
+      child: Icon(icono),
     );
   }
 
